@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:hsl(185, 75%, 39%);
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas: "main main main"
+                         "name name name"
+                         "followers likes photos";
+    background-color: white;
+    border-radius: 15px;
+    margin: 20% 8%;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+    background-color: white;
+    padding: 5%;
+    background-image: url("/images/bg-pattern-card.svg");
+    background-repeat: repeat-x;
+    background-position-y: -1em;
+    border-radius: 15px;
+}
+
+main img {
+    display: inline-block;
+    margin-top: 4em;
+    clip-path: circle(50% at 50% 50%);
+}
+
+section.name {
+    grid-area: name;
+}
+
+.fullname {
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(229, 23%, 23%);
+
+}
+.age {
+    margin-left: .5em;
+    font-size: 18px;
+    color:hsl(0, 0%, 59%)
+}
+.location {
+    color:hsl(0, 0%, 59%);
+
+}
+section.followers {
+    grid-area: followers;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: hsl(229, 23%, 23%);
+    padding: 1em;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+section.likes {
+    grid-area: likes;
+    padding: 1em;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+section.photos {
+    grid-area: photos;
+    padding: 1em;
+    border-top: 1px solid rgb(230, 230, 230);
+}
+
+.stats-data {
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(229, 23%, 23%);
+}
+
+.stats-type {
+    font-weight: 400;
+    font-size: .7em;
+    color:hsl(0, 0%, 59%)
+}
